@@ -1,0 +1,77 @@
+// bower:scss
+@import "bower_components/foundation/scss/foundation.scss";
+// endbower
+
+// Fonts
+@import "fonts";
+
+// Variables
+@import "vars";
+
+body {
+  background: $black;
+  font-family: 'Monofonto', sans-serif;
+  color: $mineshaft;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Overseer', sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: normal;
+  letter-spacing: 2px;
+  color: $green;
+}
+
+h1 {
+  font-size: responsive 32px 64px;
+}
+
+body, p {
+  color: scale-color( $green, $lightness: +70% );
+}
+
+.text-green {
+  color: $green;
+}
+
+.back {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background: $green;
+  color: $white;
+  line-height: 32px;
+  opacity: .5;
+  @include single-transition(opacity, 250ms, ease-in-out);
+
+  &:hover, &:focus {
+    opacity: 1;
+    color: $white;
+  }
+}
+
+.title {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.vam {
+  display: inline-block;
+  width: 97%;
+  vertical-align: middle;
+
+  + .vam {
+    width: .0000001px;
+    height: 100%;
+  }
+}
+
+@import "number/one";
+@import "number/two";
